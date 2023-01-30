@@ -9,7 +9,13 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final height = MediaQuery.of(context).size.height;
+    final width = MediaQuery.of(context).size.width;
+    print(width);
+    print(height);
+
     return Scaffold(
+      backgroundColor: Color(0xffFEFBF6),
         appBar: AppBar(
           backgroundColor: Colors.transparent,
           elevation: 0,

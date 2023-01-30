@@ -1,13 +1,10 @@
 import 'package:book_app_ui/view/home_page.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
 
 void main() {
-  runApp(
-    MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: MyApp(),
-    )
-  );
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -15,6 +12,19 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  HomePage();
+    return ScreenUtilInit(
+        designSize: const Size(392, 805),
+        minTextAdapt: true,
+        splitScreenMode: true,
+        builder: (BuildContext context, Widget? child) {
+          return GetMaterialApp(
+            theme: ThemeData(
+              fontFamily: 'Nunito',
+              useMaterial3: true
+            ),
+            debugShowCheckedModeBanner: false,
+            home: HomePage(),
+          );
+        });
   }
 }
