@@ -44,10 +44,13 @@ class BookTiles extends StatelessWidget {
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Text(
-                            title,
-                            style:
-                                TextStyle(color: Colors.black, fontSize: 15.sp),
+                          Expanded(
+                            child: Text(
+                              title,
+                              overflow: TextOverflow.ellipsis,
+                              style: TextStyle(
+                                  color: Colors.black, fontSize: 15.sp),
+                            ),
                           ),
                           SizedBox(height: 8),
                           Text(
@@ -59,6 +62,7 @@ class BookTiles extends StatelessWidget {
                           ),
                           Spacer(),
                           Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
                               Text(rating),
                               Spacer(),
@@ -66,7 +70,8 @@ class BookTiles extends StatelessWidget {
                                 child: Text(
                                   genre,
                                   overflow: TextOverflow.ellipsis,
-                                  style: TextStyle(color: const Color(0xff007084)),
+                                  style:
+                                      TextStyle(color: const Color(0xff007084)),
                                 ),
                               )
                             ],
@@ -80,7 +85,7 @@ class BookTiles extends StatelessWidget {
             ),
           ),
           Container(
-            height: 175.h,
+            height: 180.h,
             margin: EdgeInsets.only(left: 12.0, top: 6),
             child: ClipRRect(
               borderRadius: BorderRadius.circular(6.0),

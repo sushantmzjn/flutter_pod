@@ -4,6 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class BookDetails extends StatelessWidget {
   final Book book;
+
   BookDetails(this.book);
 
   // const BookDetails({Key? key, required this.book}) : super(key: key);
@@ -16,7 +17,6 @@ class BookDetails extends StatelessWidget {
         elevation: 0,
         title: Text(
           'Details',
-          style: TextStyle(color: Colors.black),
         ),
         centerTitle: true,
       ),
@@ -54,7 +54,8 @@ class BookDetails extends StatelessWidget {
             ),
           ),
           Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 24.0, vertical: 24.0),
+            padding:
+                const EdgeInsets.symmetric(horizontal: 24.0, vertical: 24.0),
             child: Center(child: Text(book.detail)),
           ),
           Padding(
@@ -62,20 +63,22 @@ class BookDetails extends StatelessWidget {
                 const EdgeInsets.symmetric(vertical: 10.0, horizontal: 20.0),
             child: ElevatedButton(
               style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.blue
+                backgroundColor: Colors.blue,
               ),
               onPressed: () {},
-              child: const Text('Read book', style: TextStyle(color: Colors.black),),
+              child: const Text(
+                'Read book',
+                style: TextStyle(color: Colors.black),
+              ),
             ),
           ),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 20.0),
             child: OutlinedButton(
-              style: OutlinedButton.styleFrom(
-                backgroundColor: Colors.grey
-              ),
+              style: OutlinedButton.styleFrom(backgroundColor: Colors.grey),
               onPressed: () {},
-              child: const Text('More Info', style: TextStyle(color: Colors.black)),
+              child: const Text('More Info',
+                  style: TextStyle(color: Colors.black)),
             ),
           ),
         ],

@@ -42,4 +42,10 @@ List<Book> books = [
           'A gorgeous and inspiring work of art on creation, creativity, the work of the artist. It will gladden the hearts of writers and artists everywhere, and get them working again with a new sense of meaning and direction. A stunning accomplishment.',
       genre: 'Arts & Photography',
       rating: '⭐⭐⭐⭐⭐'),
+  Book(
+      imageUrl: 'assets/ugly_love.jpg',
+      title: 'Ugly Love: A Novel',
+      detail:'When Tate Collins meets airline pilot Miles Archer, she doesn\'t think it\'s love at first sight. They wouldn’t even go so far as to consider themselves friends. The only thing Tate and Miles have in common is an undeniable mutual attraction.',
+      genre: 'Novel',
+      rating: '⭐⭐⭐'),
 ];

@@ -22,6 +22,9 @@ class MyApp extends StatelessWidget {
               fontFamily: 'Nunito',
               useMaterial3: true
             ),
+           darkTheme: ThemeData(
+             brightness: Brightness.dark
+           ),
             debugShowCheckedModeBanner: false,
             home: HomePage(),
           );

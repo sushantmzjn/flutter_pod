@@ -11,32 +11,31 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     final height = MediaQuery.of(context).size.height;
     final width = MediaQuery.of(context).size.width;
-    print(width);
-    print(height);
+    // print(width);
+    // print(height);
 
     return Scaffold(
-      backgroundColor: Color(0xffFEFBF6),
+        // backgroundColor: Colors.grey,
         appBar: AppBar(
           backgroundColor: Colors.transparent,
           elevation: 0,
           titleSpacing: 25.0,
           title: Text(
             'Hi John,',
-            style: TextStyle(color: Colors.black),
           ),
           actions: [
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: Icon(
                 CupertinoIcons.search,
-                color: Colors.black,
+                // color: Colors.black,
               ),
             ),
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: Icon(
                 CupertinoIcons.bell,
-                color: Colors.black,
+                // color: Colors.black,
               ),
             ),
             const SizedBox(width: 5.0)
@@ -73,22 +72,22 @@ class HomePage extends StatelessWidget {
                     Tab(
                       child: Text(
                         'All',
-                        style: TextStyle(
-                          color: Colors.black,
-                        ),
                       ),
                     ),
                     Tab(
-                      child: Text('Recommended',
-                          style: TextStyle(color: Colors.black)),
+                      child: Text(
+                        'Recommended',
+                      ),
                     ),
                     Tab(
-                      child: Text('Popular books',
-                          style: TextStyle(color: Colors.black)),
+                      child: Text(
+                        'Popular books',
+                      ),
                     ),
                     Tab(
-                      child: Text('My books',
-                          style: TextStyle(color: Colors.black)),
+                      child: Text(
+                        'My books',
+                      ),
                     ),
                   ]),
               Expanded(

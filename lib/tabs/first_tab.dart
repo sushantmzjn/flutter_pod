@@ -104,7 +104,11 @@ class FirstTab extends StatelessWidget {
             scrollDirection: Axis.horizontal,
             shrinkWrap: true,
             itemBuilder: (context, index) {
+              final book = books[index];
               return ShortBookTiles(
+                onTap: (){
+                  Get.to(()=> BookDetails(book), transition: Transition.downToUp );
+                },
                 imgPath: books[index].imageUrl,
                 title: books[index].title,
                 genre: books[index].genre,
